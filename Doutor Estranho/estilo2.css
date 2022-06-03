@@ -1,0 +1,223 @@
+body{
+    height: 100vh;
+	background: linear-gradient(90deg, #000, #000e 30%, #000a 50%, #0000) , url(img/bg-doutor-estranho.jpg) ;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	padding: 30px 70px 30px 70px;
+
+}
+
+/*HEADER*/
+
+header{
+	height: 36px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo img{
+	height: 100%;
+	width: 150px;
+}
+nav{
+  
+}
+
+nav ul{
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	list-style: none;
+    	text-decoration: none;
+    }
+	.nav-links{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: 1;
+		flex-direction: column;
+		background-color: black;
+		opacity: 1;
+		display: none;
+	}
+	nav li{
+		margin-top: 25px;
+		font-size: 2.5rem;
+	}
+	nav li:hover{
+	background-color: #E62721;
+	padding: 4px;
+	margin-top: 3px;
+	border-radius: 100px;
+	transition: all 0.2s;
+    }
+
+    nav a{
+    	text-decoration: none;
+    }
+    .apagar{
+    	display: flex;
+    	transition: all 1s;
+    }
+
+/*MENU BURGER HEADER*/
+
+.menu-burger-div{
+	text-align: right;
+	width: 36px;
+	height: 36px;
+}
+.menu-burger-container{
+	z-index: 2;
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	display: block;
+	text-align: right;
+	margin-right: 30px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+.menu-burger, .menu-burger::before, .menu-burger::after{
+	content: "";
+    display: block;
+	background-color: whitesmoke;
+	height: 4px;
+	width: 36px;
+	float: right;
+}
+.menu-burger::before{
+	transform: translateY(-10px);
+	transition: all 1s;
+
+}
+.menu-burger::after{
+	transform: translateY(10px);
+	transition: all 1s;
+}
+.menu-burger-container.active .menu-burger{
+	background-color: transparent;
+
+}
+.menu-burger-container.active .menu-burger::before{
+	transition: all 1s;
+
+	transform: rotate(45deg);
+}
+.menu-burger-container.active .menu-burger::after{
+	transition: all 1s;
+	transform: rotate(-45deg);
+}
+
+.menu-burger-container ~ .nav-links{
+	opacity: 0;
+}
+
+
+
+/*MAIN*/
+
+
+main{
+	flex-grow: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.conteudo-container{
+	flex-grow: 1 ;
+	/*background-color: green;*/
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+h1{
+	font-size: 4rem;
+	margin-top: 15px;
+}
+
+.doctor{
+	font-size: 20px;
+	float: left;
+	font-weight: 200;
+	margin-right: -165px ;
+	margin-top: -20px;
+	text-align: center;
+}
+
+.movie-title{
+	text-decoration: italic;
+	color: darkred;
+	font-size: 3rem;
+	transform: translateY(-10px);
+}
+.movie-title i{
+	color: darkred;
+	
+}
+.movie-text{
+	/*font-size: 10px;
+	opacity: 0.5;
+	text-align: justify;
+	width: 550px;*/
+	display: none;
+
+}
+.redes-sociais{
+	
+	display: flex;
+	bottom: 0px;
+	box-shadow: 1px whitesmoke;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+}
+
+.redes-sociais li{
+	text-decoration: none;
+	list-style: none;
+	float: left;
+	margin-bottom: 15px;
+	border: 1px solid white;
+	border-radius: 100px;
+	padding: 10px;
+	text-align: center;
+	margin: 15px 15px 30px 15px;
+
+
+}
+
+.movie-botao{
+   width: 200px;
+   height: 60px;
+   background-color: darkred;
+   padding: 2px;
+   border-radius: 10px;
+   font-size: 1.5rem;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   text-decoration: none;
+
+}
+/*FOOTER*/
+footer{
+	/*background-color: blue;*/
+	height: 21px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	text-decoration: italic;
+	opacity: 0.5;
+
+}
